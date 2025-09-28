@@ -9,9 +9,9 @@ class Settings():
 
 #speed
         self.ship_speed_factor = 1
-        self.alien_speed_factor = 1
+        self.alien_speed_factor = 10
         self.bullet_speed_factor = 5
-        self.fleet_drop_speed = 1
+        
 
         self.bullet_width = 10
         self.bullet_height = 15
@@ -19,6 +19,7 @@ class Settings():
         self.bullets_amount = 3
 
 #1 = right, -1 = left
+        self.fleet_drop_speed = 1
         self.fleet_direction = 1
 
        
