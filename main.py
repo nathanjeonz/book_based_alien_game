@@ -1,34 +1,3 @@
-def run_game():
-    pygame.init()
-    ai_setting = Settings()
-
-    screen = pygame.display.set_mode((ai_setting.screen_width,ai_setting.screen_height))
-    
-    ship = Ship(ai_setting, screen)
-    bullets = Group()
-    aliens = Group()
-
-    gf.create_fleet(ai_setting, screen,ship, aliens)
-
-
-
-    running = True
-    while running == True:        
-        gf.check_event(ai_setting, screen, ship, bullets) 
-        ship.update()
-
-        gf.update_bullets(ai_setting, screen, ship, aliens, bullets)
-
-        gf.update_aliens(ai_setting,ship,aliens)
-        gf.update_screen(ai_setting,screen,ship, aliens, bullets)
-
-
-        
-
-
-
-run_game()
-
 
 import pygame
 from pygame.sprite import Group
@@ -44,9 +13,6 @@ def run_game():
     ai_setting = Settings()
     screen = pygame.display.set_mode((ai_setting.screen_width, ai_setting.screen_height))
     pygame.display.set_caption("Alien Invasion")
-
-    from game_stats import GameStats
-    from scoreboard import Scoreboard
 
     stats = GameStats(ai_setting)
     sb = Scoreboard(ai_setting, screen, stats)
