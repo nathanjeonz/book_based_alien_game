@@ -9,7 +9,7 @@ class Settings():
 
 #speed
         self.ship_speed_factor = 1
-        self.alien_speed_factor = 10
+        self.alien_speed_factor = 1
         self.bullet_speed_factor = 5
         
 
